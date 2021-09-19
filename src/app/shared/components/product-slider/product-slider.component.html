@@ -1,0 +1,7 @@
+<div class="container" *ngIf="products?.length">
+  <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
+    <div ngxSlickItem *ngFor="let product of products; trackBy:productById" class="slide">
+      <app-product [product]="product"></app-product>
+    </div>
+  </ngx-slick-carousel>
+</div>

@@ -1,0 +1,19 @@
+.page-not-found-page {
+  height: 100%;
+  .flx{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    .hdr{
+      font-size: 300px;
+      font-weight: 600;
+      text-align: center;
+    }
+    .caption{
+      color: gray;
+      font-size: 12px;
+      text-align: center;
+    }
+  }
+}

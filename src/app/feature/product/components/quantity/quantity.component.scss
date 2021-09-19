@@ -1,0 +1,25 @@
+.quantity-field {
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  button {
+    border: none;
+  }
+
+  button:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+.quantity-field input {
+  width: 30px;
+  border: none;
+  text-align: center;
+}
+
+input:focus {
+  outline: none;
+}

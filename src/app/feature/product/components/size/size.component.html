@@ -1,0 +1,15 @@
+<div class="form-check form-check-inline pl-0">
+  <input type="radio" class="form-check-input" id="small" value="S" name="{{'size'+index}}"
+    [(ngModel)]="initialSizeValue" #ssize (input)="updateProduct(ssize.value)">
+  <label for="small" class="form-check-label small text-uppercase card-link-secondary">S</label>
+</div>
+<div class="form-check form-check-inline pl-0">
+  <input type="radio" class="form-check-input" id="medium" value="M" name="{{'size'+index}}"
+    [(ngModel)]="initialSizeValue" #msize (input)="updateProduct(msize.value)">
+  <label for="medium" class="form-check-label small text-uppercase card-link-secondary">M</label>
+</div>
+<div class="form-check form-check-inline pl-0">
+  <input type="radio" class="form-check-input" id="large" value="L" name="{{'size'+index}}"
+    [(ngModel)]="initialSizeValue" #lsize (input)="updateProduct(lsize.value)">
+  <label for="large" class="form-check-label small text-uppercase card-link-secondary">L</label>
+</div>

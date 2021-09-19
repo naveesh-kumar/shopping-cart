@@ -1,0 +1,29 @@
+<header class="header">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#">Grocery Bazzar <span><i class="bi bi-cart4"></i></span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item active">
+            <a class="nav-link" (click)="navigate('home')">Home</a>
+          </li>
+          <ng-container *ngIf="!user">
+            <li class="nav-item">
+              <a class="nav-link" (click)="navigate('auth/login')">Login</a>
+            </li>
+          </ng-container>
+          <li class="nav-item">
+            <a class="nav-link" (click)="navigate('product/view-cart')">MyCart <span style="color:red; font-weight:bold">({{count}})</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">{{user}}</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>

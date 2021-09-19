@@ -1,0 +1,7 @@
+<div class="quantity-field">
+  <button class="btn btn-sm" (click)="updateQty(qty.value)" onclick="this.parentNode.querySelector('input[type=number]').stepDown()"><i class="bi bi-dash"
+      style="font-size:20px"></i></button>
+  <input type="number" min="1" step="1" #qty [(ngModel)]="initialQtyValue" (input)="updateQty(qty.value)">
+  <button class="btn btn-sm" (click)="updateQty(qty.value)"onclick="this.parentNode.querySelector('input[type=number]').stepUp()"><i class="bi bi-plus"
+      style="font-size:20px"></i></button>
+</div>

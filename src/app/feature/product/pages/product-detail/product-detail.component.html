@@ -1,0 +1,44 @@
+<app-header></app-header>
+<div class="container">
+  <ng-container *ngIf="product">
+    <div class="row">
+      <div class="col-md-6 product-image">
+        <img src="{{cartProduct.product.image}}" alt="" class="img-fluid">
+      </div>
+      <div class="col-md-6 product-meta-details">
+        <h5>{{product.title}}</h5>
+        <p class="text-muted text-uppercase" style="font-size: 13px;">{{cartProduct.product.category}}</p>
+        <p><strong>${{product.price}}</strong></p>
+        <p>{{product.description}}</p>
+        <hr>
+        <div style="margin-bottom: 30px;">
+          <table>
+            <tbody>
+              <tr>
+                <td class="text-muted">Quantity</td>
+                <td class="text-muted">Select size</td>
+              </tr>
+              <tr>
+                <td>
+                  <app-quantity [initialQtyValue]="cartProduct.qty" (qtyEvent)="updateProduct($event)"></app-quantity>
+                </td>
+                <td>
+                  <div>
+                    <app-size [initialSizeValue]="cartProduct.size" (qtyEvent)="updateProduct($event)"></app-size>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <button class="btn btn-primary m-1">Buy now</button>
+        <button class="btn btn-light m-1" (click)="addToCart()"><i class="bi bi-cart3"></i> Add to cart</button>
+      </div>
+    </div>
+  </ng-container>
+  <hr>
+  <div>
+    <h3 class="mb-20 mt-2">Related products</h3>
+    <app-product-slider [products]="products"></app-product-slider>  
+  </div>
+</div>
